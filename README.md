@@ -13,7 +13,7 @@ classDiagram
     }
 
     class Account {
-        -String: String
+        -String: number
         -String: agency
         -Number: balance
         -Number: limit
