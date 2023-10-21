@@ -5,33 +5,33 @@ Uma RESTful API criada através do Santander Bootcamp 2023 - Java Backend.
 ```mermaid
 classDiagram
     class User {
-        -name: String
-        -account: Account
-        -features: Feature[]
-        -card: Card
-        -news: News[]
+        -String: name
+        -Account: account
+        -Feature[]: features
+        -Card: card
+        -News[]: news
     }
 
     class Account {
-        -number: String
-        -agency: String
-        -balance: Number
-        -limit: Number
+        -String: String
+        -String: agency
+        -Number: balance
+        -Number: limit
     }
 
     class Feature {
-        -icon: String
-        -description: String
+        -String: icon
+        -String: description
     }
 
     class Card {
-        -number: String
-        -limit: Number
+        -String: number
+        -Number: limit
     }
 
     class News {
-        -icon: String
-        -description: String
+        -String: icon
+        -String: description
     }
 
     User "1" *-- "1" Account
