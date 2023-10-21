@@ -1,7 +1,7 @@
 # Santander Bootcamp 2023 - Java Backend
 Uma RESTful API criada através do Santander Bootcamp 2023 - Java Backend.
 
-##Diagrama de Classes
+## Diagrama de Classes
 ```mermaid
 classDiagram
     class User {
@@ -34,8 +34,8 @@ classDiagram
         -description: String
     }
 
-    User -- Account
-    User -- Feature
-    User -- Card
-    User -- News
+    User "1" *-- "1" Account
+    User "1" *-- "N" Feature
+    User "1" *-- "1" Card
+    User "1" *-- "N" News
 ```
