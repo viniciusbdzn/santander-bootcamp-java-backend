@@ -1,31 +1,41 @@
 # Santander Bootcamp 2023 - Java Backend
 Uma RESTful API criada através do Santander Bootcamp 2023 - Java Backend.
 
-Diagrama de Classes
+##Diagrama de Classes
 ```mermaid
-{
-  "name": "Vinicius",
-  "account": {
-    "number": "123456789-0",
-    "agency": "9876",
-    "balance": 7842.82,
-    "limit": 2000.00
-  },
-  "features": [
-    {
-      "icon": "URL",
-      "description": "Descrição da feature."
+classDiagram
+    class User {
+        -name: String
+        -account: Account
+        -features: Feature[]
+        -card: Card
+        -news: News[]
     }
-  ],
-  "card": {
-    "number": "xxxx xxxx xxxx 8473",
-    "limit": 2000.00
-  },
-  "news": [
-    {
-    "icon": " ",
-    "description": "Descrição das novidades."
+
+    class Account {
+        -number: String
+        -agency: String
+        -balance: Number
+        -limit: Number
     }
-  ]
-}
+
+    class Feature {
+        -icon: String
+        -description: String
+    }
+
+    class Card {
+        -number: String
+        -limit: Number
+    }
+
+    class News {
+        -icon: String
+        -description: String
+    }
+
+    User -- Account
+    User -- Feature
+    User -- Card
+    User -- News
 ```
